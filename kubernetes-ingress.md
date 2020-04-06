@@ -97,4 +97,5 @@ certificate and the --resolve option to set the Host header of a request with ``
     $ kubectl port-forward <nginx-plus-ingress-pod> 8080:8080 --namespace=nginx-ingress
     ```
     Go to <https://docs.nginx.com/nginx-ingress-controller/logging-and-monitoring/status-page/#accessing-live-activity-monitoring-dashboard> to configure with more details.
+    
     http://localhost:8080/dashboard.html#upstreams ![Dashboard](NICDashboard.png)
