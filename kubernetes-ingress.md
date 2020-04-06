@@ -9,8 +9,9 @@ Modification based on self-test purpose. You should consult that link above to g
 2. You need to create the NGINX Plus ingress image.
 
 Demo ENV
-Docker Desktop with Kubernetes installed.
-Don't forget to configure the preference in the Docker Desktop to enable
+
+    Docker Desktop with Kubernetes installed.
+    Don't forget to configure the preference in the Docker Desktop to enable
 
 ```
 {
