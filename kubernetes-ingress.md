@@ -11,7 +11,10 @@ Modification based on self-test purpose. You should consult that link above to g
 Demo ENV
 
     Docker Desktop with Kubernetes installed.
-    Don't forget to configure the preference in the Docker Desktop to enable
+
+Don't forget to configure the preference in the Docker Desktop to enable your private repo. I am using the nexus3 to manage my repos. Please follow this [link](https://docs.nginx.com/nginx-ingress-controller/installation/building-ingress-controller-image/#building-the-image-and-pushing-it-to-the-private-registry) to build by yourself
+
+Please go through this doc if you want to build the image using [nexus3](https://github.com/highblue/docker/blob/master/nexus3.md)
 
 ```
 {
