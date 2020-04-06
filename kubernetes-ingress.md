@@ -70,17 +70,31 @@ $ kubectl create -f cafe.yaml
 1. To access the application, curl the coffee and the tea services. We'll use ```curl```'s --insecure option to turn off certificate verification of our self-signed
 certificate and the --resolve option to set the Host header of a request with ```cafe.example.com```
     ⚠️ 这里做测试的时候，如果是localhost也会出问题。所以必须是127.0.0.1
-    To get coffee:
+    
+    To get coffee:My example
     ```
     $ curl --resolve cafe.example.com:$IC_HTTPS_PORT:$IC_IP https://cafe.example.com:$IC_HTTPS_PORT/coffee --insecure
-    Server address: 10.12.0.18:80
-    Server name: coffee-7586895968-r26zn
-    ...
+    Server address: 10.1.0.70:80
+    Server name: coffee-6f758cc7cc-65dh8
+    Date: 06/Apr/2020:10:20:34 +0000
+    URI: /coffee
+    Request ID: 3b08029787ecb1e5d1260d5b0edcd8b4
     ```
     If your prefer tea:
     ```
     $ curl --resolve cafe.example.com:$IC_HTTPS_PORT:$IC_IP https://cafe.example.com:$IC_HTTPS_PORT/tea --insecure
-    Server address: 10.12.0.19:80
-    Server name: tea-7cd44fcb4d-xfw2x
-    ...
+    Server address: 10.1.0.73:80
+    Server name: tea-b88549687-fm9jk
+    Date: 06/Apr/2020:10:24:41 +0000
+    URI: /tea
+    Request ID: 69094ff53e3dda4cda5b00efec5a3cd6
     ```
+ 2. View the status through Dashboard.html
+    
+    Get your pod name and run command
+    
+    ```
+    $ kubectl port-forward <nginx-plus-ingress-pod> 8080:8080 --namespace=nginx-ingress
+    ```
+    Go to <https://docs.nginx.com/nginx-ingress-controller/logging-and-monitoring/status-page/#accessing-live-activity-monitoring-dashboard> to configure with more details.
+    http://localhost:8080/dashboard.html#upstreams ![Dashboard](NICDashboard.png)
