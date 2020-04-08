@@ -41,6 +41,8 @@ In this example we deploy the NGINX Plus Ingress controller, a simple web applic
    Notice you need to change the nginx-plus-ingress [repo address](https://github.com/nginxinc/kubernetes-ingress/blob/2ca15ee657efd1fb340a3479ddbef6f73e8fb5ab/deployments/deployment/nginx-plus-ingress.yaml#L21)
    
    Change the marked line to your private image.
+   
+   Notice: Please must run $git checkout v1.6.3
 
 2. Save the public IP address of the Ingress controller into a shell variable:
     ```
