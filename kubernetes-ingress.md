@@ -38,6 +38,9 @@ In this example we deploy the NGINX Plus Ingress controller, a simple web applic
 ## 1. Deploy the Ingress Controller
 
 1. Follow the installation [instructions](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-manifests/) to deploy the Ingress controller.
+   Notice you need to change the nginx-plus-ingress [repo address](https://github.com/nginxinc/kubernetes-ingress/blob/2ca15ee657efd1fb340a3479ddbef6f73e8fb5ab/deployments/deployment/nginx-plus-ingress.yaml#L21)
+   
+   Change the marked line to your private image.
 
 2. Save the public IP address of the Ingress controller into a shell variable:
     ```
